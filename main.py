@@ -8,6 +8,8 @@ import io
 
 # This key will serve all examples in this document.
 subscription_key="bf2087b529b84a5eba7ea73e0a85208a"
+assert subscription_key
+
 # This endpoint will be used in all examples in this quickstart.
 face_api_url = "https://20210322matu.cognitiveservices.azure.com/face/v1.0/detect"
 
