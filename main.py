@@ -41,4 +41,12 @@ if uploaded_file is not None:
 
             draw = ImageDraw.Draw(img)
             draw.rectangle([(rect['left'],rect['top']),(rect['left']+rect['width']),(rect['top']+rect['height'])],fill=None,outline='green')
+            draw_x = rect['left']-30
+            draw_y = rect['top']-30
+
+            text = result['faceAttributes']['gender']+'/'+str(result['faceAttributes']['age'])
+   
+            draw.text((draw_x, draw_y), text, fill='red')
+
+        
         st.image(img,caption='Uploaded Image.',use_column_width=True)
